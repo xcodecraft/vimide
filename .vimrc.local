@@ -1,0 +1,170 @@
+nnoremap <F3>       : tabprevious<CR>
+inoremap <F3><Esc>  : tabprevious<CR>i
+nnoremap <F4>       : tabnext<CR>
+inoremap <F4><Esc>  : tabnext<CR>i
+nnoremap <C-t>      : tabnew<CR>
+inoremap <C-t><Esc> : tabnew<CR>
+
+" 临时映射 <F5>
+" Python
+" if mapcheck('<F5>') == ""
+"    noremap <F5> :!python %<CR>
+"    inoremap <F5> <ESC><ESC>:w<CR>:!python %<CR>
+" endif
+
+" shell script
+" noremap  <F5> <ESC>:w<CR>:!sh ./%<CR>
+" inoremap <F5> <ESC><ESC>:w<CR>:!sh ./%<CR>
+
+" Go Lang
+" au Filetype go set makeprg=go\ build\ ./...
+" noremap  <F5> :make<CR>:copen<CR>
+" inoremap <F5> <ESC><ESC>:w<CR>:make><CR>:copen<CR>
+
+" 请勿在项目文件中使用以下快捷键映射
+" <F7>   <Esc>: call Pylon_prj_cmd("build_index.sh") <CR>
+" <F8>   <Esc>: call Pylon_prj_cmd(g:pylon_prj_init) <CR>
+" <F9>   <Esc>: call Pylon_build_index() <CR>
+
+nnoremap <silent><F11> : NERDTreeTabsToggle<CR>
+nnoremap \n            : NERDTreeTabsToggle<CR>
+" nnoremap  \cmd         : cal VimCommanderToggle()<CR>
+nnoremap <silent><F12> : TagbarToggle<CR>
+nnoremap \t            : TagbarToggle<CR>
+
+" <Leader>快捷键定义
+" let mapleader = '\'
+
+" 快速使.vimrc配置生效
+map <silent> <Leader>V :source ~/.vimrc<CR>:filetype detect<CR>
+
+" 快速保存
+map <silent> `s <Esc>:w<CR>:exe ":echo 'saved'"<CR>
+
+" 零时获取sudo权限[w!!]
+cmap w!! %!sudo tee > /dev/null %
+
+" CtrlP <C-p>
+noremap <Leader>be <Esc>:CtrlPBuffer<CR>
+noremap <Leader>bm <Esc>:CtrlPMRU<CR>
+let g:ctrlp_custom_ignore = {
+            \ 'dir':  '\v[\/]\.(git|hg|svn)$|\./(_prj|_rg|tmp)$',
+            \ 'file': '\v\.(exe|so|dll)$|.prjide',
+            \ 'link': 'some_bad_symbolic_links',
+            \ }
+
+" DoxygenToolkit.vim
+" 生成Doxygen风格的文档注释
+noremap <Leader>dc <Esc>:Dox<CR>
+noremap <Leader>da <Esc>:DoxAuthor<CR>
+" noremap <Leader>dd <Esc>:DoxUndoc<CR>
+
+" tcommment_vim
+" 代码注释
+noremap  <Leader>x :TComment<cr>
+noremap  <Leader>X :TCommentRight<cr>
+xnoremap <Leader>x :TCommentMaybeInline<cr>
+noremap  <Leader>c :TCommentMaybeInline<cr>
+noremap  <Leader>C :TCommentBlock<cr>
+xnoremap <Leader>c :TCommentBlock<cr>
+
+" NERDTree<F11>
+" 左侧文件菜单插件
+
+" Scroll from source 
+noremap <Leader>sf <Esc>:NERDTreeFind<CR>
+" NerdTree没有箭头
+let g:NERDTreeDirArrows=0
+
+" autocmd VimEnter * NERDTreeTabsToggle
+" --- 若NERDTree是关闭其他Buffer后剩下的唯一窗口，则退出Vim
+" autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+" let g:nerdtree_tabs_autoclose=0
+" --- 若使用Vim打开某个文件，则自动打开NERDTree的同时，将焦点也转移至新文件中
+" autocmd VimEnter * if argc() | wincmd p | endif
+
+" tagbar右侧结构树<F12>
+" tagbar-phpctags
+let g:tagbar_indent = 1
+let g:tagbar_autofocus = 1
+" -- 用「相对行数」+ [j/k] 或「绝对行数」+ G 快速移动
+" 相对行数2，绝对行数值为1。
+let g:tagbar_show_linenumbers = 1
+let g:tagbar_zoomwidth = 1
+" let g:tagbar_autopreview = 1
+" let g:tagbar_autoclose = 1
+let g:tagbar_phpctags_memory_limit = '512M'
+let g:tagbar_width = 30
+
+" phpfolding.vim
+" let php_folding=0
+" autocmd FileType php setlocal foldmethod=manual 
+
+" Ctags
+" let g:prj = getcwd()
+" if filereadable('./tmp/tags')
+"     execute "set tags+=".g:prj."/tmp/tags;"
+" elseif filereadable('./tags')
+"     execute "set tags+=".g:prj."/tags;"
+" endif
+
+" 输入大写字符可以查看snipmate
+" let g:acp_behaviorSnipmateLength = 1
+
+" 避免和supertab冲突
+let g:SuperTabMappingForward="<tab>" 
+let g:SuperTabDefaultCompletionType = "<c-n>"
+
+" 弹出窗口快捷键映射 
+" inoremap <expr><CR>  pumvisible() ? "\<C-y>\<CR>" : "\<CR>"
+inoremap <expr><Esc> pumvisible() ? "\<C-e>\<Esc>" : "\<Esc>"
+" inoremap <expr> <Down>     pumvisible() ? "\<C-n>" : "\<Down>"
+" inoremap <expr> <Up>       pumvisible() ? "\<C-p>" : "\<Up>"
+
+" phpqa
+let g:phpqa_codesniffer_args = "--standard=Zend"
+" Don't run codesniffer on save (default = 1)
+let g:phpqa_codesniffer_autorun = 0
+let g:phpqa_messdetector_autorun = 0
+
+" vim-easy-align
+vmap <Enter> <Plug>(EasyAlign)
+
+" vim-jsbeautify
+" unmap! <c-f>
+autocmd FileType javascript noremap <buffer> <Leader>ff :call JsBeautify()<CR>
+autocmd FileType html noremap <buffer> <Leader>ff :call HtmlBeautify()<CR>
+autocmd FileType css noremap <buffer> <Leader>ff :call CSSBeautify()<CR>
+autocmd FileType php noremap <buffer> <Leader>ff :call PhpBeautify()<CR>
+autocmd FileType javascript vnoremap <buffer> <Leader>ff :call RangeJsBeautify()<CR>
+autocmd FileType html vnoremap <buffer> <Leader>ff :call RangeHtmlBeautify()<CR>
+autocmd FileType css vnoremap <buffer> <Leader>ff :call RangeCSSBeautify()<CR>
+
+" 切换php/html文件类型以配合缩进和语法补全
+autocmd FileType html,php map <buffer> <Leader>ft :call FileTypeToggle()<CR> 
+
+" EasyMotion 
+" 快速移动
+" let g:EasyMotion_leader_key='<leader>'
+" map <C-O> <Leader><Leader>w
+" map <C-E> <Leader><Leader>W
+
+" 永远屏蔽补全Scrtach Preview窗口
+" set completeopt-=preview
+
+" 离开插入模式或者在插入模式中移动时，关闭 Scratch Preview窗口
+" autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
+" autocmd InsertLeave * if pumvisible() == 0|pclose|endif
+
+" --- Emmet/ZenCoding
+" --- 快速生成任意HTML/CSS/XSL标签的「组合」
+"--: Redefine trigger key
+" let g:user_emmet_leader_key='<c-z>' 
+
+" 默认是否用 l 代替 o 打开文件
+" g:vj_nerdtree_active_node_with_l = 0
+" 打开VJ时是否定位到最后一个编辑的文件
+" g:vj_open_last_file_mode = 1
+" Nerdtree定位到最后一个文件
+" g:vj_source_from_code_mode = 0 
+

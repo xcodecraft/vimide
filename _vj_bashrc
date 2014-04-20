@@ -1,0 +1,11 @@
+# .bashrc
+
+PHPCTAGS_PATH=$HOME/.vim/team_bundle/phpctags
+
+if [[ -x $PHPCTAGS_PATH/phpctags ]]; then
+    export PHPCTAGS_PATH
+    PATH=$PATH:$PHPCTAGS_PATH
+    export PATH
+fi
+
+alias vj="vim '+call VjOpen()'" 
