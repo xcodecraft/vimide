@@ -15,4 +15,3 @@ cp -P ~/.bash* $backupDir
 
 backupVim
 echo -e "已将文件备份至" $backupDir 
-echo "------------------------------"

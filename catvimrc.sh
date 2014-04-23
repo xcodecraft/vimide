@@ -11,7 +11,7 @@
 #     sed -n '/^" GAME_TEAM_VJ/ {s///; :a; n; p; ba; }' _vimrc_local > 拼接文件 
 
 source $(dirname $0)/config.sh
-# OLD_VIMRC=/home/q/tools/game_team/vim/runtime/_vimrc_local 
+# OLD_VIMRC=/home/q/tools/game_team/vim/runtime/_vimrc
 
 temp_vimrc="/tmp/temp_vimrc"
 
@@ -32,8 +32,8 @@ else
     touch new_vimrc > $temp_vimrc 
 fi
 
-
-"  ----------------------------------------------------
-cat $(dirname $0)/_vimrc_head $temp_vimrc > ~/.vimrc
+echo -e '"  ---------------------------------------------' > ~/.vimrc 
+echo -e "source $VIMIDE_SRC/.vimrc" >> ~/.vimrc 
+cat $(dirname $0)/_vimrc_head $temp_vimrc >> ~/.vimrc
 echo -e "~/.vimrc已生成\n"
 rm -rf $temp_vimrc
