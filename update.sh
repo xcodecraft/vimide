@@ -18,6 +18,6 @@ echo -e "source $VIMIDE_SRC/_vj_bashrc" >> ~/.bash_profile
 
 read -p "VJ已经更新完成，请问需要立即生效吗？（否则将在下次登录时生效）[ctrl+c]取消(Y/n) n:" isSource
 case $isSource in
-    y | Y | yes | YES ) source ~/.bash_profile
+    y | Y | yes | YES )  mkdir source ~/.bash_profile
 esac
 

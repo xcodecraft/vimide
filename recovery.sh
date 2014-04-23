@@ -35,8 +35,8 @@ bk_vim=${array[$selectedNum]}
 
 cur_bk_path=$BACKUP_DIR/$bk_vim
 
-if [[ -d $cur_bk_path/.vim ]]; then
-   rm -rf ~/.vim/
+if [[ -d $cur_bk_path/.vim || -f $cur_bk_path/.vim ]]; then
+   rm -rf ~/.vim
    cp -R $cur_bk_path/.vim ~
    echo "~/.vim/ 已恢复"
 fi

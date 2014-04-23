@@ -10,7 +10,7 @@ if [[ ! -d $backupDir ]]; then
 fi
 cp -P ~/.vimrc $backupDir
 cp -R ~/.vim   $backupDir
-cp -P ~/.bash* $backupDir 
+cp -P ~/.bash_profile $backupDir 
 }
 
 backupVim
