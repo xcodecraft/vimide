@@ -34,8 +34,8 @@ Bundle "shawncplus/phpcomplete.vim",          {'bundle_dir': team_bundle_dir}
 " Bundle "Valloric/YouCompleteMe",            {'bundle_dir': team_bundle_dir}
 
 " QA/debug
-Bundle "joonty/vim-phpqa",                    {'bundle_dir': team_bundle_dir}
-Bundle "joonty/vim-phpunitqf",                {'bundle_dir': team_bundle_dir}
+" Bundle "joonty/vim-phpqa",                  {'bundle_dir': team_bundle_dir}
+" Bundle "joonty/vim-phpunitqf",              {'bundle_dir': team_bundle_dir}
 " Bundle "scrooloose/syntastic",              {'bundle_dir': team_bundle_dir}
 " Bundle "joonty/vdebug",                     {'bundle_dir': team_bundle_dir}
 
@@ -65,10 +65,10 @@ Bundle 'https://leiming@bitbucket.org/leiming/pylon_ide.git', {'bundle_dir': tea
 "--------------
 " Color Schemes
 "--------------
-Bundle 'rickharris/vim-blackboard'
-Bundle 'altercation/vim-colors-solarized'
-Bundle 'rickharris/vim-monokai'
-Bundle 'tpope/vim-vividchalk'
-Bundle 'Lokaltog/vim-distinguished'
-Bundle 'chriskempson/vim-tomorrow-theme'
-Bundle 'fisadev/fisa-vim-colorscheme'
+Bundle 'rickharris/vim-blackboard',        {'bundle_dir': team_bundle_dir}
+Bundle 'altercation/vim-colors-solarized', {'bundle_dir': team_bundle_dir}
+Bundle 'rickharris/vim-monokai',           {'bundle_dir': team_bundle_dir}
+Bundle 'tpope/vim-vividchalk',             {'bundle_dir': team_bundle_dir}
+Bundle 'Lokaltog/vim-distinguished',       {'bundle_dir': team_bundle_dir}
+Bundle 'chriskempson/vim-tomorrow-theme',  {'bundle_dir': team_bundle_dir}
+Bundle 'fisadev/fisa-vim-colorscheme',     {'bundle_dir': team_bundle_dir}
