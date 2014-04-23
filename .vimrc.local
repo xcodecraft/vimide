@@ -97,8 +97,8 @@ let g:tagbar_phpctags_memory_limit = '512M'
 let g:tagbar_width = 30
 
 " phpfolding.vim
-" let php_folding=0
-" autocmd FileType php setlocal foldmethod=manual 
+let php_folding=0
+autocmd BufRead,BufNewFile FileType php setlocal foldmethod=manual | if() EnableFastPHPFolds
 
 " Ctags
 " let g:prj = getcwd()
@@ -112,12 +112,12 @@ let g:tagbar_width = 30
 " let g:acp_behaviorSnipmateLength = 1
 
 " 避免和supertab冲突
-let g:SuperTabMappingForward="<tab>" 
-let g:SuperTabDefaultCompletionType = "<c-n>"
+" let g:SuperTabMappingForward="<tab>" 
+let g:SuperTabDefaultCompletionType = "context"
 
 " 弹出窗口快捷键映射 
 " inoremap <expr><CR>  pumvisible() ? "\<C-y>\<CR>" : "\<CR>"
-inoremap <expr><Esc> pumvisible() ? "\<C-e>\<Esc>" : "\<Esc>"
+" inoremap <expr><Esc> pumvisible() ? "\<C-e>\<Esc>" : "\<Esc>"
 " inoremap <expr> <Down>     pumvisible() ? "\<C-n>" : "\<Down>"
 " inoremap <expr> <Up>       pumvisible() ? "\<C-p>" : "\<Up>"
 

@@ -1,1 +1,1 @@
-Init project!
+Init VJ!

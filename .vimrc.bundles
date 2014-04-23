@@ -30,7 +30,6 @@ Bundle "othree/vim-autocomplpop",             {'bundle_dir': team_bundle_dir}
 
 Bundle 'ervandew/supertab',                   {'bundle_dir': team_bundle_dir}
 Bundle 'ervandew/matchem',                    {'bundle_dir': team_bundle_dir}
-" Bundle "Townk/vim-autoclose",               {'bundle_dir': team_bundle_dir}
 Bundle "shawncplus/phpcomplete.vim",          {'bundle_dir': team_bundle_dir}
 " Bundle "Valloric/YouCompleteMe",            {'bundle_dir': team_bundle_dir}
 
@@ -57,9 +56,6 @@ Bundle "Lokaltog/vim-easymotion",             {'bundle_dir': team_bundle_dir}
 Bundle "joequery/Stupid-EasyMotion",          {'bundle_dir': team_bundle_dir}
 Bundle "evanmiller/nginx-vim-syntax",         {'bundle_dir': team_bundle_dir}
 Plugin 'maksimr/vim-jsbeautify',              {'bundle_dir': team_bundle_dir}
-
-
-
 
 Bundle 'https://leiming@bitbucket.org/leiming/pylon_ide.git', {'bundle_dir': team_bundle_dir}
 " Bundle '2072/PHP-Indenting-for-VIm',        {'bundle_dir': team_bundle_dir}

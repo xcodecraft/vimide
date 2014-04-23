@@ -23,17 +23,11 @@ filetype plugin indent on
 
 " --- END configure Vundle ---
 
-set bs=indent,eol,start
-
+set backspace=indent,eol,start
 set smartindent
-if has("vms")
-  set nobackup
-else
-  set backup
-endif
 set ruler
+set number
 set showcmd
-filetype plugin indent on
 set tabstop=4
 set expandtab
 set shiftwidth=4
@@ -42,8 +36,14 @@ set incsearch
 set showmatch
 set foldmethod=marker
 
-autocmd FileType html,css,javascript setlocal shiftwidth=2
-au BufRead,BufNewFile /etc/nginx/*,/usr/local/nginx/conf/*,*_ngx.conf if &ft == '' | setfiletype nginx | endif 
+if has("vms")
+  set nobackup
+else
+  set backup
+endif
+
+autocmd FileType html,css,javascript setlocal shiftwidth=2 | set foldmethod=indent
+autocmd BufRead,BufNewFile /etc/nginx/*,/usr/local/nginx/conf/*,*_ngx.conf if &ft == '' | set filetype=nginx | syntax on |  endif 
 
 let editorconfig=expand('~/.vim/team_bundle/.editorconfig')
 if filereadable(editorconfig)
@@ -57,12 +57,6 @@ endif
 set backupdir=~/backup/vim
 set backupext=.bak
 
-" 配色Vim为256
-set t_Co=256
-scriptencoding utf-8
-colorscheme darkburn
-set nu
-set bg=dark 
 
 " Visual Mode 快捷键
 map vi' <Esc>?'<CR>lv/'<CR>h
@@ -85,10 +79,17 @@ autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
 autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
 autocmd FileType c setlocal omnifunc=ccomplete#Complete
+autocmd FileType vim set omnifunc=syntaxcomplete#Complete
 
 " 文件编码
 set fileencodings=ucs-bom,utf-8,cp936,gb18030,big5,euc-jp,euc-kr,latin1
+scriptencoding utf-8
 
 " set background=dark
 set errorformat=%m\ in\ %f\ on\ line\ %l
 
+" 配色Vim为256
+set t_Co=256
+set bg=dark 
+colorscheme Tomorrow-Night
+" colorscheme darkburn
