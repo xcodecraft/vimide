@@ -17,7 +17,8 @@ temp_vimrc="/tmp/temp_vimrc"
 
 if [[ ~/.vimrc -ef $OLD_VIMRC ]]; then
     touch new_vimrc > $temp_vimrc
-    rm -f new_vimrc
+    rm -rf new_vimrc
+    rm -rf ~/.vimrc
 elif [[ -h ~/.vimrc ]]; then
     LVIMRC=`readlink ~/.vimrc`
     rm -rf ~/.vimrc 
