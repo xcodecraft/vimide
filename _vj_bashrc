@@ -8,4 +8,8 @@ if [[ -x $PHPCTAGS_PATH/phpctags ]]; then
     export PATH
 fi
 
-alias vj="vim '+call VjOpen()'" 
+alias vj="vim '+call VjOpen()'"
+alias vjbackup="bash /home/q/tools/game_team/vimide/backup.sh"
+alias vjrecovery="bash /home/q/tools/game_team/vimide/recovery.sh"
+alias vjupdate="bash /home/q/tools/game_team/vimide/update.sh"
+ 

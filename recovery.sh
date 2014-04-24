@@ -59,7 +59,7 @@ if [[ -e $cur_bk_path/.bash_profile ]]; then
     echo "~/.bash_profile 已恢复"
 fi
 
-read -p "VJ已经还原，请问需要立即生效吗? [ctrl+c]取消：(y/n) n:" isSource
+read -p "VJ已经还原，请问需要立即生效吗? [ctrl+c]取消：(y/n) y:" isSource
 case $isSource in
-    y | Y | yes | YES ) source ~/.bash_profile
+    y | Y | yes | YES | "" ) source ~/.bash_profile
 esac

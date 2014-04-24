@@ -17,3 +17,7 @@ if [[ ! ~/.vim/team_bundle -ef "$VIMIDE_SRC/team_bundle" ]]; then
     ln -s $VIMIDE_SRC/team_bundle ~/.vim/team_bundle 
 fi
 
+if [[ !-r ~/.vim/.editorconfig  ]]; then
+    echo -e "---- 生成 ~/.vim/.editorconfig 文件 ----\n"
+    cp -f $(dirname $0)/.editorconfig  ~/.vim/
+fi
