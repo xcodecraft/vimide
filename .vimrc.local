@@ -5,6 +5,7 @@ inoremap <F4><Esc>  : tabnext<CR>i
 nnoremap <C-t>      : tabnew<CR>
 inoremap <C-t><Esc> : tabnew<CR>
 
+
 " 临时映射 <F5>
 " Python
 " if mapcheck('<F5>') == ""
@@ -26,9 +27,9 @@ inoremap <C-t><Esc> : tabnew<CR>
 " <F8>   <Esc>: call Pylon_prj_cmd(g:pylon_prj_init) <CR>
 " <F9>   <Esc>: call Pylon_build_index() <CR>
 
-nnoremap <silent><F11> : NERDTreeTabsToggle<CR>
+nnoremap <F5>          : VJNERDTreeRefresh<CR>
+nnoremap <silent><F10> : NERDTreeTabsToggle<CR>
 nnoremap \n            : NERDTreeTabsToggle<CR>
-" nnoremap  \cmd         : cal VimCommanderToggle()<CR>
 nnoremap <silent><F12> : TagbarToggle<CR>
 nnoremap \t            : TagbarToggle<CR>
 
@@ -48,7 +49,7 @@ cmap w!! %!sudo tee > /dev/null %
 noremap <Leader>be <Esc>:CtrlPBuffer<CR>
 noremap <Leader>bm <Esc>:CtrlPMRU<CR>
 let g:ctrlp_custom_ignore = {
-            \ 'dir':  '\v[\/]\.(git|hg|svn)$|\./(_prj|_rg|tmp)$',
+            \ 'dir':  '\v[\/]\.(git|hg|svn)$|(node_modules|_prj|tmp)$',
             \ 'file': '\v\.(exe|so|dll)$|.prjide',
             \ 'link': 'some_bad_symbolic_links',
             \ }
@@ -68,13 +69,16 @@ noremap  <Leader>c :TCommentMaybeInline<cr>
 noremap  <Leader>C :TCommentBlock<cr>
 xnoremap <Leader>c :TCommentBlock<cr>
 
-" NERDTree<F11>
+" NERDTree<F10>
 " 左侧文件菜单插件
 
 " Scroll from source 
 noremap <Leader>sf <Esc>:NERDTreeFind<CR>
 " NerdTree没有箭头
 let g:NERDTreeDirArrows=0
+
+" 默认是否用 l 代替 o 打开文件
+let g:vj_nerdtree_compatible = 1
 
 " autocmd VimEnter * NERDTreeTabsToggle
 " --- 若NERDTree是关闭其他Buffer后剩下的唯一窗口，则退出Vim
@@ -96,6 +100,19 @@ let g:tagbar_zoomwidth = 1
 let g:tagbar_phpctags_memory_limit = '512M'
 let g:tagbar_width = 30
 
+let g:tagbar_type_go = {
+    \ 'ctagstype': 'go',
+    \ 'kinds' : [
+        \'p:package',
+        \'f:function',
+        \'v:variables',
+        \'t:type',
+        \'c:const'
+    \]
+    \}
+
+let g:tagbar_type_javascript = {'ctagsbin' : '/usr/local/bin/jsctags' }
+
 " phpfolding.vim
 let php_folding=0
 autocmd BufRead,BufNewFile FileType php setlocal foldmethod=manual | if() EnableFastPHPFolds
@@ -112,7 +129,6 @@ autocmd BufRead,BufNewFile FileType php setlocal foldmethod=manual | if() Enable
 " let g:acp_behaviorSnipmateLength = 1
 
 " 避免和supertab冲突
-" let g:SuperTabMappingForward="<tab>" 
 let g:SuperTabDefaultCompletionType = "context"
 
 " 弹出窗口快捷键映射 
@@ -143,6 +159,13 @@ autocmd FileType css vnoremap <buffer> <Leader>ff :call RangeCSSBeautify()<CR>
 " 切换php/html文件类型以配合缩进和语法补全
 autocmd FileType html,php map <buffer> <Leader>ft :call FileTypeToggle()<CR> 
 
+
+
+
+
+
+
+
 " EasyMotion 
 " 快速移动
 " let g:EasyMotion_leader_key='<leader>'
@@ -161,8 +184,6 @@ autocmd FileType html,php map <buffer> <Leader>ft :call FileTypeToggle()<CR>
 "--: Redefine trigger key
 " let g:user_emmet_leader_key='<c-z>' 
 
-" 默认是否用 l 代替 o 打开文件
-" g:vj_nerdtree_active_node_with_l = 0
 " 打开VJ时是否定位到最后一个编辑的文件
 " g:vj_open_last_file_mode = 1
 " Nerdtree定位到最后一个文件

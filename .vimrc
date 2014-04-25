@@ -91,5 +91,4 @@ set errorformat=%m\ in\ %f\ on\ line\ %l
 " 配色Vim为256
 set t_Co=256
 set bg=dark 
-colorscheme Tomorrow-Night
-" colorscheme darkburn
+colorscheme default
