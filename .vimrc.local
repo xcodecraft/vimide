@@ -65,8 +65,8 @@ noremap <Leader>da <Esc>:DoxAuthor<CR>
 noremap  <Leader>x :TComment<cr>
 noremap  <Leader>X :TCommentRight<cr>
 xnoremap <Leader>x :TCommentMaybeInline<cr>
-noremap  <Leader>c :TCommentMaybeInline<cr>
-noremap  <Leader>C :TCommentBlock<cr>
+noremap  <Leader>C :TCommentMaybeInline<cr>
+noremap  <Leader>c :TCommentBlock<cr>
 xnoremap <Leader>c :TCommentBlock<cr>
 
 " NERDTree<F10>
@@ -75,7 +75,7 @@ xnoremap <Leader>c :TCommentBlock<cr>
 " Scroll from source 
 noremap <Leader>sf <Esc>:NERDTreeFind<CR>
 " NerdTree没有箭头
-let g:NERDTreeDirArrows=0
+let g:NERDTreeDirArrows = 0
 
 " 默认是否用 l 代替 o 打开文件
 let g:vj_nerdtree_compatible = 1
@@ -126,7 +126,6 @@ autocmd BufRead,BufNewFile FileType php setlocal foldmethod=manual | if() Enable
 " endif
 
 " 输入大写字符可以查看snipmate
-" let g:acp_behaviorSnipmateLength = 1
 
 " 避免和supertab冲突
 let g:SuperTabDefaultCompletionType = "context"
@@ -151,20 +150,13 @@ vmap <Enter> <Plug>(EasyAlign)
 autocmd FileType javascript noremap <buffer> <Leader>ff :call JsBeautify()<CR>
 autocmd FileType html noremap <buffer> <Leader>ff :call HtmlBeautify()<CR>
 autocmd FileType css noremap <buffer> <Leader>ff :call CSSBeautify()<CR>
-autocmd FileType php noremap <buffer> <Leader>ff :call PhpBeautify()<CR>
+autocmd FileType php noremap <buffer> <Leader>ff :call VjPhpBeautify()<CR>
 autocmd FileType javascript vnoremap <buffer> <Leader>ff :call RangeJsBeautify()<CR>
 autocmd FileType html vnoremap <buffer> <Leader>ff :call RangeHtmlBeautify()<CR>
 autocmd FileType css vnoremap <buffer> <Leader>ff :call RangeCSSBeautify()<CR>
 
-" 切换php/html文件类型以配合缩进和语法补全
-autocmd FileType html,php map <buffer> <Leader>ft :call FileTypeToggle()<CR> 
-
-
-
-
-
-
-
+" 切换php/html/javascript文件类型以配合缩进和语法补全
+autocmd FileType html,php,javascript map <buffer> <Leader>ft :call VjFileTypeToggle()<CR> 
 
 " EasyMotion 
 " 快速移动
@@ -188,4 +180,9 @@ autocmd FileType html,php map <buffer> <Leader>ft :call FileTypeToggle()<CR>
 " g:vj_open_last_file_mode = 1
 " Nerdtree定位到最后一个文件
 " g:vj_source_from_code_mode = 0 
+
+
+nnoremap <C-W>O     :call VjMaximizeToggle()<CR>
+nnoremap <C-W>o     :call VjMaximizeToggle()<CR>
+nnoremap <C-W><C-O> :call VjMaximizeToggle()<CR>
 

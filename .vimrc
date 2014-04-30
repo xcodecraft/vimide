@@ -36,6 +36,13 @@ set incsearch
 set showmatch
 set foldmethod=marker
 
+set history=10000
+set nrformats=
+
+set wildmenu
+set wildmode=full
+" set wildmode=longest,list
+
 if has("vms")
   set nobackup
 else
