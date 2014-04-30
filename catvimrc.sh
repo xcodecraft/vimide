@@ -5,7 +5,7 @@ source $(dirname $0)/config.sh
 
 temp_vimrc="/tmp/temp_vimrc"
 
-if [[ ~/.vimrc -ef $OLD_VIMR || "$1" = '-f' ]]; then
+if [[ ~/.vimrc -ef $OLD_VIMRC || "$1" = '-f' ]]; then
     touch new_vimrc > $temp_vimrc
     rm -rf new_vimrc
     rm -rf ~/.vimrc
