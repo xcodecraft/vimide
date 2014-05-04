@@ -8,6 +8,7 @@ let team_bundle_dir=expand('~/.vim/team_bundle/')
 " endif
 
 Bundle 'leiming/Vundle.vim',                  {'bundle_dir': team_bundle_dir}
+Bundle 'bufexplorer.zip',                     {'bundle_dir': team_bundle_dir}
 Bundle 'editorconfig/editorconfig-vim',       {'bundle_dir': team_bundle_dir}
 Bundle 'kien/ctrlp.vim',                      {'bundle_dir': team_bundle_dir}
 Bundle 'leiming/nerdtree',                    {'bundle_dir': team_bundle_dir}

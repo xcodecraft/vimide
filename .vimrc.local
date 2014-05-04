@@ -46,7 +46,7 @@ map <silent> `s <Esc>:w<CR>:exe ":echo 'saved'"<CR>
 cmap w!! %!sudo tee > /dev/null %
 
 " CtrlP <C-p>
-noremap <Leader>be <Esc>:CtrlPBuffer<CR>
+" noremap <Leader>be <Esc>:CtrlPBuffer<CR>
 noremap <Leader>bm <Esc>:CtrlPMRU<CR>
 let g:ctrlp_custom_ignore = {
             \ 'dir':  '\v[\/]\.(git|hg|svn)$|(node_modules|_prj|tmp)$',
@@ -76,6 +76,8 @@ xnoremap <Leader>c :TCommentBlock<cr>
 noremap <Leader>sf <Esc>:NERDTreeFind<CR>
 " NerdTree没有箭头
 let g:NERDTreeDirArrows = 0
+" 隐藏帮助说明和书签
+let NERDTreeMinimalUI = 1
 
 " 默认是否用 l 代替 o 打开文件
 let g:vj_nerdtree_compatible = 1
