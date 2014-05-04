@@ -1,0 +1,3 @@
+[submodule "team_bundle/pylon_ide"]
+	path = team_bundle/pylon_ide
+	url = https://leiming@bitbucket.org/leiming/pylon_ide.git
