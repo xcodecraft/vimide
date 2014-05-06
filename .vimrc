@@ -43,6 +43,10 @@ set wildmenu
 set wildmode=full
 " set wildmode=longest,list
 
+" cscope
+set cscopeverbose
+set cscopetag
+
 if has("vms")
   set nobackup
 else
