@@ -2,5 +2,5 @@
 	path = team_bundle/pylon_ide
 	url = https://leiming@bitbucket.org/leiming/pylon_ide.git
 [submodule "team_bundle/nerdtree"]
-	path = team_bundle/nerdtree
-	url = https://github.com/leiming/nerdtree.git
+    path = team_bundle/nerdtree
+    url = https://github.com/leiming/nerdtree.git
