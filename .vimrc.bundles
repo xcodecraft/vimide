@@ -1,4 +1,4 @@
-    " 请勿在该文档内绑定个人项目的bundles，因为当团队插件更新时他们将会被移除
+" 请勿在该文档内绑定个人项目的bundles，因为当团队插件更新时他们将会被移除
 
 " 团队插件路径
 let team_bundle_dir=expand('~/.vim/team_bundle/')
@@ -62,6 +62,8 @@ Bundle "Lokaltog/vim-easymotion",             {'bundle_dir': team_bundle_dir}
 Bundle "joequery/Stupid-EasyMotion",          {'bundle_dir': team_bundle_dir}
 Bundle "evanmiller/nginx-vim-syntax",         {'bundle_dir': team_bundle_dir}
 Plugin 'maksimr/vim-jsbeautify',              {'bundle_dir': team_bundle_dir}
+" Bundle 'brookhong/cscope.vim',                {'bundle_dir': team_bundle_dir}
+
 
 Bundle 'https://leiming@bitbucket.org/leiming/pylon_ide.git', {'bundle_dir': team_bundle_dir}
 " Bundle '2072/PHP-Indenting-for-VIm',        {'bundle_dir': team_bundle_dir}
