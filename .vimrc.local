@@ -167,7 +167,7 @@ autocmd FileType html,php,javascript map <buffer> <Leader>ft :call VjFileTypeTog
 " map <C-E> <Leader><Leader>W
 
 " 永远屏蔽补全Scrtach Preview窗口
-" set completeopt-=preview
+set completeopt-=preview
 
 " 离开插入模式或者在插入模式中移动时，关闭 Scratch Preview窗口
 " autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
