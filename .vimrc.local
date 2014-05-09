@@ -1,7 +1,3 @@
-nnoremap <F3>       : tabprevious<CR>
-inoremap <F3><Esc>  : tabprevious<CR>i
-nnoremap <F4>       : tabnext<CR>
-inoremap <F4><Esc>  : tabnext<CR>i
 nnoremap <C-t>      : tabnew<CR>
 inoremap <C-t><Esc> : tabnew<CR>
 
@@ -53,6 +49,8 @@ let g:ctrlp_custom_ignore = {
             \ 'file': '\v\.(exe|so|dll)$|.prjide',
             \ 'link': 'some_bad_symbolic_links',
             \ }
+
+nmap <F3> <Esc>:CtrlP<CR>
 
 " DoxygenToolkit.vim
 " 生成Doxygen风格的文档注释
