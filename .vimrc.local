@@ -183,6 +183,9 @@ set completeopt-=preview
 " Nerdtree定位到最后一个文件
 " g:vj_source_from_code_mode = 0 
 
+" Ag.vim
+let g:agprg="ag --skip-vcs-ignores  --smart-case --ignore-dir={_prj,node_modules,tmp}  --column"
+
 
 nnoremap <C-W>O     :call VjMaximizeToggle()<CR>
 nnoremap <C-W>o     :call VjMaximizeToggle()<CR>
