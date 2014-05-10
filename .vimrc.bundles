@@ -61,6 +61,7 @@ Bundle "mattn/emmet-vim",                     {'bundle_dir': team_bundle_dir}
 Bundle "Lokaltog/vim-easymotion",             {'bundle_dir': team_bundle_dir}
 Bundle "joequery/Stupid-EasyMotion",          {'bundle_dir': team_bundle_dir}
 Bundle "evanmiller/nginx-vim-syntax",         {'bundle_dir': team_bundle_dir}
+Plugin "othree/html5.vim",                    {'bundle_dir': team_bundle_dir}
 Plugin 'maksimr/vim-jsbeautify',              {'bundle_dir': team_bundle_dir}
 " Bundle 'brookhong/cscope.vim',                {'bundle_dir': team_bundle_dir}
 
