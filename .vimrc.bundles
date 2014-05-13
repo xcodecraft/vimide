@@ -52,8 +52,8 @@ Bundle 'junegunn/vim-easy-align',             {'bundle_dir': team_bundle_dir}
 Bundle 'leiming/phpfolding.vim',              {'bundle_dir': team_bundle_dir}
 
 " Front End Bundle
-Bundle 'rmanalan/jshint.vim',                 {'bundle_dir': team_bundle_dir}
-Bundle 'pangloss/vim-javascript',             {'bundle_dir': team_bundle_dir}
+" Bundle 'rmanalan/jshint.vim',                 {'bundle_dir': team_bundle_dir}
+" Bundle 'pangloss/vim-javascript',             {'bundle_dir': team_bundle_dir}
 Bundle 'Blackrush/vim-gocode',                {'bundle_dir': team_bundle_dir}
 Bundle "mattn/emmet-vim",                     {'bundle_dir': team_bundle_dir}
 
