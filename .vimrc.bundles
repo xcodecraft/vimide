@@ -22,7 +22,7 @@ Bundle 'vim-php/phpctags',                    {'bundle_dir': team_bundle_dir}
 Bundle 'vim-php/tagbar-phpctags.vim',         {'bundle_dir': team_bundle_dir}
 
 " snipmate + snippets + autocomplpop补全"
-Plugin 'SirVer/ultisnips',                    {'bundle_dir': team_bundle_dir}
+" Plugin 'SirVer/ultisnips',                    {'bundle_dir': team_bundle_dir}
 Bundle "MarcWeber/vim-addon-mw-utils",        {'bundle_dir': team_bundle_dir}
 Bundle "tomtom/tlib_vim",                     {'bundle_dir': team_bundle_dir}
 Bundle "garbas/vim-snipmate",                 {'bundle_dir': team_bundle_dir}

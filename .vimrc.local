@@ -1,3 +1,6 @@
+nnoremap [m  <Esc> : tabprevious<CR>
+nnoremap ]m  <Esc> : tabnext<CR>
+
 nnoremap <C-t>      : tabnew<CR>
 inoremap <C-t><Esc> : tabnew<CR>
 
