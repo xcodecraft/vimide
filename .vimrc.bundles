@@ -66,7 +66,7 @@ Bundle "othree/html5.vim",                    {'bundle_dir': team_bundle_dir}
 Plugin 'maksimr/vim-jsbeautify',              {'bundle_dir': team_bundle_dir}
 " Bundle 'brookhong/cscope.vim',                {'bundle_dir': team_bundle_dir}
 
-Bundle 'https://leiming@bitbucket.org/leiming/pylon_ide.git', {'bundle_dir': team_bundle_dir}
+Bundle 'https://gameteam360@bitbucket.org/gameteam360/pylon_ide.git', {'bundle_dir': team_bundle_dir}
 " Bundle '2072/PHP-Indenting-for-VIm',        {'bundle_dir': team_bundle_dir}
 " Bundle 'lpenz/vimcommander'
 

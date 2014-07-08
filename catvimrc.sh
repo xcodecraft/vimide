@@ -3,6 +3,8 @@
 source $(dirname $0)/config.sh
 # OLD_VIMRC=/home/q/tools/game_team/vim/runtime/_vimrc
 
+BASEDIR=$(cd $(dirname $BASH_SOURCE);pwd)
+
 temp_vimrc="/tmp/temp_vimrc"
 
 if [[ ~/.vimrc -ef $OLD_VIMRC || "$1" = '-f' ]]; then
@@ -26,7 +28,7 @@ else
 fi
 
 echo -e '"  ---------------------------------------------' > ~/.vimrc 
-echo -e "source $VIMIDE_SRC/.vimrc" >> ~/.vimrc 
+echo -e "source $BASEDIR/.vimrc" >> ~/.vimrc 
 cat $(dirname $0)/_vimrc_head $temp_vimrc >> ~/.vimrc
 echo -e "~/.vimrc已生成\n"
 rm -rf $temp_vimrc
