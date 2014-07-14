@@ -12,7 +12,7 @@ if [[ ! -d ~/.vim ]]; then
 fi
 
 if [[ ! -rd "$TEAM_BUNDLE_DIR" ]]; then
-    echo -e "---- 更新 创建$TEAM_BUNDLE_DIR ----\n"
+    echo -e "---- 正在创建 $TEAM_BUNDLE_DIR , 请输入sudo 权限密码： ----\n"
     sudo mkdir -p $TEAM_BUNDLE_DIR
     sudo chmod 777 $TEAM_BUNDLE_DIR
 fi
@@ -24,12 +24,14 @@ if [[ ! ~/.vim/team_bundle -ef "$TEAM_BUNDLE_DIR" ]]; then
 fi
 
 if [[ ! -rd  ~/.vim/team_bundle/Vundle.vim/ ]]; then
+    echo -e "---- 更新 ~/.vim/team_bundle/Vundle.vim ----\n"
     git clone https://github.com/leiming/Vundle.vim.git ~/.vim/team_bundle/Vundle.vim/
 fi
 
 
 if [[ ! -rd  ~/.vim/team_bundle/pylon_ide/ ]]; then
-    $BASEDIR/gitclone.exp https://gameteam360@bitbucket.org/gameteam360/pylon_ide.git ~/.vim/team_bundle/pylon_ide wan.360.cn
+    echo -e "---- 更新 ~/.vim/team_bundle/pylon_ide ----\n"
+    git clone https://bitbucket.org/gameteam360/pylon_ide.git ~/.vim/team_bundle/pylon_ide/
 fi
 
 if [[ ! -r ~/.vim/.editorconfig ]]; then
