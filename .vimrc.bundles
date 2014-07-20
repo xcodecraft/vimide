@@ -50,7 +50,7 @@ Bundle "tpope/vim-unimpaired",                {'bundle_dir': team_bundle_dir}
 " Bundle 'Align'
 " Bundle 'godlygeek/tabular',                 {'bundle_dir': team_bundle_dir}
 Bundle 'junegunn/vim-easy-align',             {'bundle_dir': team_bundle_dir}
-Bundle 'leiming/phpfolding.vim',              {'bundle_dir': team_bundle_dir}
+Bundle 'rayburgemeestre/phpfolding.vim',      {'bundle_dir': team_bundle_dir}
 
 " Front End Bundle
 " Bundle 'rmanalan/jshint.vim',                 {'bundle_dir': team_bundle_dir}

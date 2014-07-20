@@ -53,6 +53,10 @@ let g:ctrlp_custom_ignore = {
             \ 'link': 'some_bad_symbolic_links',
             \ }
 
+"智能大小写
+set ignorecase
+set smartcase
+
 nmap <F3> <Esc>:CtrlP<CR>
 
 " DoxygenToolkit.vim
@@ -73,7 +77,7 @@ xnoremap <Leader>c :TCommentBlock<cr>
 " NERDTree<F10>
 " 左侧文件菜单插件
 
-" Scroll from source 
+" Scroll from source
 noremap <Leader>sf <Esc>:NERDTreeFind<CR>
 " NerdTree没有箭头
 let g:NERDTreeDirArrows = 0
@@ -118,7 +122,7 @@ let g:tagbar_type_javascript = {'ctagsbin' : '/usr/local/bin/jsctags' }
 
 " phpfolding.vim
 let php_folding=0
-autocmd BufRead,BufNewFile FileType php setlocal foldmethod=manual | if() EnableFastPHPFolds
+autocmd BufRead,BufNewFile FileType php setlocal foldmethod=manual | EnableFastPHPFolds
 
 " Ctags
 " let g:prj = getcwd()
@@ -133,7 +137,7 @@ autocmd BufRead,BufNewFile FileType php setlocal foldmethod=manual | if() Enable
 " 避免和supertab冲突
 let g:SuperTabDefaultCompletionType = "context"
 
-" 弹出窗口快捷键映射 
+" 弹出窗口快捷键映射
 " inoremap <expr><CR>  pumvisible() ? "\<C-y>\<CR>" : "\<CR>"
 " inoremap <expr><Esc> pumvisible() ? "\<C-e>\<Esc>" : "\<Esc>"
 " inoremap <expr> <Down>     pumvisible() ? "\<C-n>" : "\<Down>"
@@ -159,9 +163,9 @@ autocmd FileType html vnoremap <buffer> <Leader>ff :call RangeHtmlBeautify()<CR>
 autocmd FileType css vnoremap <buffer> <Leader>ff :call RangeCSSBeautify()<CR>
 
 " 切换php/html/javascript文件类型以配合缩进和语法补全
-autocmd FileType html,php,javascript map <buffer> <Leader>ft :call VjFileTypeToggle()<CR> 
+autocmd FileType html,php,javascript map <buffer> <Leader>ft :call VjFileTypeToggle()<CR>
 
-" EasyMotion 
+" EasyMotion
 " 快速移动
 " let g:EasyMotion_leader_key='<leader>'
 " map <C-O> <Leader><Leader>w
@@ -177,12 +181,12 @@ set completeopt-=preview
 " --- Emmet/ZenCoding
 " --- 快速生成任意HTML/CSS/XSL标签的「组合」
 "--: Redefine trigger key
-" let g:user_emmet_leader_key='<c-z>' 
+" let g:user_emmet_leader_key='<c-z>'
 
 " 打开VJ时是否定位到最后一个编辑的文件
 " g:vj_open_last_file_mode = 1
 " Nerdtree定位到最后一个文件
-" g:vj_source_from_code_mode = 0 
+" g:vj_source_from_code_mode = 0
 
 " Ag.vim
 let g:agprg="ag --skip-vcs-ignores  --smart-case --ignore-dir={_prj,node_modules,tmp}  --column"
