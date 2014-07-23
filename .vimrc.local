@@ -152,6 +152,8 @@ let g:phpqa_messdetector_autorun = 0
 " vim-easy-align
 vmap <Enter> <Plug>(EasyAlign)
 
+vnoremap <Leader>a: :EasyAlign:s0l1<CR>
+
 " vim-jsbeautify
 " unmap! <c-f>
 autocmd FileType javascript noremap <buffer> <Leader>ff :call JsBeautify()<CR>
