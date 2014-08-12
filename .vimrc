@@ -45,16 +45,13 @@ set wildmenu
 set wildmode=full
 " set wildmode=longest,list
 
-" cscope
-set cscopeverbose
-set cscopetag
-
 if has("vms")
   set nobackup
 else
   set backup
 endif
 
+" 用 editorconfig 统一托管缩进格式，所以不需要对 Vim 单独配置
 " autocmd FileType html,css,javascript setlocal shiftwidth=2 | set foldmethod=indent
 autocmd BufRead,BufNewFile /etc/nginx/*,/usr/local/nginx/conf/*,*_ngx.conf if &ft == '' | set filetype=nginx | syntax on |  endif
 

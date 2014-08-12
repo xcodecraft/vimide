@@ -120,19 +120,28 @@ let g:tagbar_type_go = {
 
 let g:tagbar_type_javascript = {'ctagsbin' : '/usr/local/bin/jsctags' }
 
+" cscope
+"" Avoiding duplicate cscope database error within VIM
+set nocscopeverbose
+set cscopetag
+
 " phpfolding.vim
 let php_folding=0
 autocmd BufRead,BufNewFile FileType php setlocal foldmethod=manual | EnableFastPHPFolds
 
 " Ctags
-" let g:prj = getcwd()
-" if filereadable('./tmp/tags')
-"     execute "set tags+=".g:prj."/tmp/tags;"
-" elseif filereadable('./tags')
-"     execute "set tags+=".g:prj."/tags;"
-" endif
+let g:prj = getcwd()
+if filereadable('./_prj/tags')
+    execute "set tags+=".g:prj."/_prj/tags,"
+endif
 
-" 输入大写字符可以查看snipmate
+if filereadable('./_prj/pylon_tags')
+    execute "set tags+=".g:prj."/_prj/pylon_tags,"
+endif
+
+if filereadable('./tags')
+    execute "set tags+=".g:prj."/tags,"
+endif
 
 " 避免和supertab冲突
 let g:SuperTabDefaultCompletionType = "context"
@@ -152,17 +161,17 @@ let g:phpqa_messdetector_autorun = 0
 " vim-easy-align
 vmap <Enter> <Plug>(EasyAlign)
 
-vnoremap <Leader>a: :EasyAlign:s0l1<CR>
+vnoremap : :EasyAlign:s0l1<CR>
 
 " vim-jsbeautify
 " unmap! <c-f>
-autocmd FileType javascript noremap <buffer> <Leader>ff :call JsBeautify()<CR>
-autocmd FileType html noremap <buffer> <Leader>ff :call HtmlBeautify()<CR>
-autocmd FileType css noremap <buffer> <Leader>ff :call CSSBeautify()<CR>
-autocmd FileType php noremap <buffer> <Leader>ff :call VjPhpBeautify()<CR>
-autocmd FileType javascript vnoremap <buffer> <Leader>ff :call RangeJsBeautify()<CR>
-autocmd FileType html vnoremap <buffer> <Leader>ff :call RangeHtmlBeautify()<CR>
-autocmd FileType css vnoremap <buffer> <Leader>ff :call RangeCSSBeautify()<CR>
+autocmd FileType javascript noremap <buffer> <Leader>ff  : call JsBeautify()<CR>
+autocmd FileType html noremap <buffer> <Leader>ff        : call HtmlBeautify()<CR>
+autocmd FileType css noremap <buffer> <Leader>ff         : call CSSBeautify()<CR>
+autocmd FileType php noremap <buffer> <Leader>ff         : call VjPhpBeautify()<CR>
+autocmd FileType javascript vnoremap <buffer> <Leader>ff : call RangeJsBeautify()<CR>
+autocmd FileType html vnoremap <buffer> <Leader>ff       : call RangeHtmlBeautify()<CR>
+autocmd FileType css vnoremap <buffer> <Leader>ff        : call RangeCSSBeautify()<CR>
 
 " 切换php/html/javascript文件类型以配合缩进和语法补全
 autocmd FileType html,php,javascript map <buffer> <Leader>ft :call VjFileTypeToggle()<CR>
