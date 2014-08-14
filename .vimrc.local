@@ -146,6 +146,9 @@ endif
 " 避免和supertab冲突
 let g:SuperTabDefaultCompletionType = "context"
 
+" 关闭phpcomplete 跳转功能,完全使用 ctags 与 cscope
+g:phpcomplete_enhance_jump_to_definition=0
+
 " 弹出窗口快捷键映射
 " inoremap <expr><CR>  pumvisible() ? "\<C-y>\<CR>" : "\<CR>"
 " inoremap <expr><Esc> pumvisible() ? "\<C-e>\<Esc>" : "\<Esc>"
