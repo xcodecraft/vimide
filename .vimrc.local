@@ -123,7 +123,7 @@ let g:tagbar_type_javascript = {'ctagsbin' : '/usr/local/bin/jsctags' }
 " cscope
 "" Avoiding duplicate cscope database error within VIM
 set nocscopeverbose
-set cscopetag
+" set cscopetag
 
 " phpfolding.vim
 let php_folding=0
@@ -147,7 +147,7 @@ endif
 let g:SuperTabDefaultCompletionType = "context"
 
 " 关闭phpcomplete 跳转功能,完全使用 ctags 与 cscope
-g:phpcomplete_enhance_jump_to_definition=0
+let g:phpcomplete_enhance_jump_to_definition=0
 
 " 弹出窗口快捷键映射
 " inoremap <expr><CR>  pumvisible() ? "\<C-y>\<CR>" : "\<CR>"
