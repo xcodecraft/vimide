@@ -94,11 +94,11 @@ autocmd FileType vim set omnifunc=syntaxcomplete#Complete
 autocmd BufRead,BufNewFile FileType html setlocal foldlevel=2
 
 " 去除 PHP 尖括号「<:>」的默认匹配与自动补全
-autocmd BufRead,BufNewFile,BufEnter FileType php set matchpairs-=<:>
-autocmd BufWinEnter *.php set mps-=<:>
+autocmd FileType php set matchpairs-=<:>
 
 " 使 php 和 js 的单词带 $ 符号，从而修复 Debug 问题
-autocmd BufRead,BufNewFile FileType php,javascript setlocal iskeyword+=$
+autocmd FileType php,javascript setlocal iskeyword+=$
+autocmd FileType php setlocal iskeyword-=-
 
 " 保存前自动压缩末尾空格
 autocmd BufWritePre *.pl :%s/\s\+$//e
