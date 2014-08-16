@@ -27,10 +27,10 @@ inoremap <C-t><Esc> : tabnew<CR>
 " <F9>   <Esc>: call Pylon_build_index() <CR>
 
 nnoremap <F5>          : VJNERDTreeRefresh<CR>
+nnoremap <silent><F7>  : TagbarToggle<CR>
+nnoremap \t            : TagbarToggle<CR>
 nnoremap <silent><F10> : NERDTreeTabsToggle<CR>
 nnoremap \n            : NERDTreeTabsToggle<CR>
-nnoremap <silent><F12> : TagbarToggle<CR>
-nnoremap \t            : TagbarToggle<CR>
 
 " <Leader>快捷键定义
 " let mapleader = '\'

@@ -37,7 +37,7 @@ fi
 
 # todo: 更新editorconfig
 rm -rf ~/.vim/.editorconfig
-if [[ ! -r ~/.vim/.editorconfig ]]; then
+if [[ ! -r ~/.editorconfig ]]; then
     echo -e "---- 生成 ~/.vim/.editorconfig 文件 ----\n"
-    cp -f $BASEDIR/.editorconfig  ~/.vim/
+    cp -f $BASEDIR/.editorconfig  ~/
 fi
