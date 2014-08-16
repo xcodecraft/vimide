@@ -20,8 +20,8 @@ Bundle 'L9',                                  {'bundle_dir': team_bundle_dir}
 Bundle 'majutsushi/tagbar',                   {'bundle_dir': team_bundle_dir}
 
 " todo: ctags patch 后可以不装?
-Bundle 'vim-php/phpctags',                    {'bundle_dir': team_bundle_dir}
-Bundle 'vim-php/tagbar-phpctags.vim',         {'bundle_dir': team_bundle_dir}
+" Bundle 'vim-php/phpctags',                    {'bundle_dir': team_bundle_dir}
+" Bundle 'vim-php/tagbar-phpctags.vim',         {'bundle_dir': team_bundle_dir}
 
 " cscope 支持
 Bundle 'leiming/cscope_maps',                   {'bundle_dir': team_bundle_dir}
