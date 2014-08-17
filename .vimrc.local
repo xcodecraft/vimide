@@ -127,7 +127,10 @@ set nocscopeverbose
 
 " phpfolding.vim
 let php_folding=0
-autocmd BufRead,BufNewFile FileType php setlocal foldmethod=manual | EnableFastPHPFolds
+autocmd FileType php setlocal foldmethod=manual | EnableFastPHPFolds
+
+" 在{与}之间换行，能自动插入新行
+autocmd FileType php,javascript inoremap {<CR> {<CR>}<Esc>O<BS><Tab>
 
 " Ctags
 let g:prj = getcwd()
