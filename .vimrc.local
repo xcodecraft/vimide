@@ -136,16 +136,24 @@ autocmd FileType php,javascript inoremap {<CR> {<CR>}<Esc>O<BS><Tab>
 
 " Ctags
 let g:prj = getcwd()
+
+func! UpdatePrjTags()
+    " 将 _prj/ 下 tags 结尾的文件
+    let a:tag_list=split(globpath(g:prj."/_prj/", '*tags'), "\n")
+    set tags=
+    let i=0
+
+    while i<len(a:tag_list)
+        if filereadable(a:tag_list[i])
+            " echo a:tag_list[i]
+            execute "set tags+=".a:tag_list[i]
+        endif
+        let i+=1
+    endwhile
+endf
+
 if filereadable('./_prj/tags')
-    execute "set tags+=".g:prj."/_prj/tags,"
-endif
-
-if filereadable('./_prj/pylon_tags')
-    execute "set tags+=".g:prj."/_prj/pylon_tags,"
-endif
-
-if filereadable('./tags')
-    execute "set tags+=".g:prj."/tags,"
+    :call UpdatePrjTags()
 endif
 
 " 避免和supertab冲突
