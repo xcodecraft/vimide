@@ -223,3 +223,9 @@ nnoremap <C-W>O     :call VjMaximizeToggle()<CR>
 nnoremap <C-W>o     :call VjMaximizeToggle()<CR>
 nnoremap <C-W><C-O> :call VjMaximizeToggle()<CR>
 
+" vim-phpcheck
+" 写入文件时自动保存
+" let g:php_check_autorun = 1
+
+noremap <F6> :call CallPhpCheckSyntax()<CR>
+inoremap <F6> <ESC>:call CallPhpCheckSyntax()<CR>
