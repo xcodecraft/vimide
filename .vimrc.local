@@ -83,6 +83,8 @@ noremap <Leader>sf <Esc>:NERDTreeFind<CR>
 let g:NERDTreeDirArrows = 0
 " 隐藏帮助说明和书签
 let NERDTreeMinimalUI = 1
+" 在新标签中打开文件后，默认开启 NERDTree
+let g:nerdtree_tabs_open_on_console_startup=1
 
 " 默认是否用 l 代替 o 打开文件
 let g:vj_nerdtree_compatible = 1
