@@ -1,6 +1,6 @@
 #!/bin/bash
 
-if [[ -r "$1" ]]; then
+if [[ -n "$1" ]]; then
     IPFILE=$1
 else
     IPFILE='testiplist'
