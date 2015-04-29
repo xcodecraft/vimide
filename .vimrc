@@ -67,21 +67,6 @@ endif
 set backupdir=~/backup/vim
 set backupext=.bak
 
-" Visual Mode 快捷键
-map vi' <Esc>?'<CR>lv/'<CR>h
-map vi" <Esc>?"<CR>lv/"<CR>h
-map va' <Esc>?'<CR>v/'<CR>
-map va" <Esc>?"<CR>v/"<CR>
-map vix <Esc>?><CR>lv/<<CR>h
-map vi= <ESC>?\s\+\S\+\s*=\s*\S\+<CR>lv/=<CR>/\S<CR>/[\s<>\n]<CR>h
-map vi/ <Esc>?\/<CR>l<Esc>v/\/<CR>h
-map vt) <ESC>v/)<CR>h
-map vt' <ESC>v/'<CR>h
-map vt" <ESC>v/"<CR>h
-map vt; <ESC>v/;<CR>h
-map vt, <ESC>v/,<CR>h
-map vt} <ESC>v/}<CR>h
-
 " php和html文件的补全规则
 autocmd FileType php set omnifunc=phpcomplete#CompletePHP
 autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
