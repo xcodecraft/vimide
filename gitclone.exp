@@ -1,0 +1,9 @@
+#!/usr/bin/expect 
+
+set timeout 30  
+spawn git clone [lindex $argv 0] [lindex $argv 1]  
+expect {  
+        "Password for*"  
+        {send "[lindex $argv 2]\n"}  
+}  
+interact

@@ -1,0 +1,5 @@
+team_bundle/
+deploy/iplist
+deploy/testiplist
+tags
+cscope.out
