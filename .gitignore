@@ -1,5 +1,6 @@
 team_bundle/
 deploy/iplist
 deploy/testiplist
+deploy/publish_vimide.sh
 tags
 cscope.out
