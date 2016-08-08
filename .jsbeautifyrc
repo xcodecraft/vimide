@@ -1,0 +1,7 @@
+{
+    "indent_size" : 2,
+    "e4x"         : true,
+    "brace_style" : "collapse-preserve-inline"
+}
+
+

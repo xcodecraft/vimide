@@ -23,12 +23,18 @@ else
     bash $BASEDIR/catvimrc.sh
 fi
 
+
+if [[ ! -r ~/.jsbeautifyrc  ]]; then
+    echo -e "---- 更新.jsbeautifyrc ----\n"
+    cp $BASEDIR/.jsbeautifyrc ~/
+fi
+
 echo -e "---- 更新.vim ----\n"
 bash $BASEDIR/catvimdir.sh
 
 echo -e "---- 更新.bash_profile ----\n"
 sed -i -e '/_vj_bashrc/d' ~/.bash_profile
-sed -i -e '/alias\s*vj/d' ~/.bash_profile
+sed -i -e '/alias[ ]*vj/d' ~/.bash_profile
 
 echo -e "alias vjbackup=\"bash $BASEDIR/backup.sh\""      >> ~/.bash_profile
 echo -e "alias vjrecovery=\"bash $BASEDIR/recovery.sh\""  >> ~/.bash_profile
