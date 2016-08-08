@@ -183,11 +183,11 @@ vnoremap <Leader>: :EasyAlign:s0l1<CR>
 
 " vim-jsbeautify
 " unmap! <c-f>
-autocmd FileType javascript noremap <buffer> <Leader>ff  : call JsBeautify()<CR>
+autocmd FileType javascript noremap <buffer> <Leader>ff  : Autoformat<CR>
 autocmd FileType html noremap <buffer> <Leader>ff        : call HtmlBeautify()<CR>
 autocmd FileType css noremap <buffer> <Leader>ff         : call CSSBeautify()<CR>
 autocmd FileType php noremap <buffer> <Leader>ff         : call VjPhpBeautify()<CR>
-autocmd FileType javascript vnoremap <buffer> <Leader>ff : call RangeJsBeautify()<CR>
+autocmd FileType javascript vnoremap <buffer> <Leader>ff : Autoformat<CR>
 autocmd FileType html vnoremap <buffer> <Leader>ff       : call RangeHtmlBeautify()<CR>
 autocmd FileType css vnoremap <buffer> <Leader>ff        : call RangeCSSBeautify()<CR>
 

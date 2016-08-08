@@ -37,7 +37,7 @@ Bundle "honza/vim-snippets",                  {'bundle_dir': team_bundle_dir}
 
 Bundle 'ervandew/supertab',                   {'bundle_dir': team_bundle_dir}
 Bundle 'ervandew/matchem',                    {'bundle_dir': team_bundle_dir}
-Bundle "shawncplus/phpcomplete.vim",          {'bundle_dir': team_bundle_dir}
+" Bundle "shawncplus/phpcomplete.vim",          {'bundle_dir': team_bundle_dir}
 " Bundle "Valloric/YouCompleteMe",            {'bundle_dir': team_bundle_dir}
 
 Bundle 'rking/ag.vim',                        {'bundle_dir': team_bundle_dir}
@@ -59,8 +59,9 @@ Bundle 'rayburgemeestre/phpfolding.vim',      {'bundle_dir': team_bundle_dir}
 
 " Front End Bundle
 " Bundle 'rmanalan/jshint.vim',                 {'bundle_dir': team_bundle_dir}
-" Bundle 'pangloss/vim-javascript',             {'bundle_dir': team_bundle_dir}
-Bundle 'fatih/vim-go',                        {'bundle_dir': team_bundle_dir}
+Bundle 'pangloss/vim-javascript',             {'bundle_dir': team_bundle_dir}
+Bundle 'mxw/vim-jsx',                         {'bundle_dir': team_bundle_dir}
+" Bundle 'fatih/vim-go',                        {'bundle_dir': team_bundle_dir}
 Bundle "mattn/emmet-vim",                     {'bundle_dir': team_bundle_dir}
 
 " Other
@@ -68,7 +69,7 @@ Bundle "Lokaltog/vim-easymotion",             {'bundle_dir': team_bundle_dir}
 Bundle "joequery/Stupid-EasyMotion",          {'bundle_dir': team_bundle_dir}
 Bundle "evanmiller/nginx-vim-syntax",         {'bundle_dir': team_bundle_dir}
 Bundle "othree/html5.vim",                    {'bundle_dir': team_bundle_dir}
-Plugin 'maksimr/vim-jsbeautify',              {'bundle_dir': team_bundle_dir}
+Plugin 'Chiel92/vim-autoformat',              {'bundle_dir': team_bundle_dir}
 Plugin 'leiming/vim-phpcheck',                {'bundle_dir': team_bundle_dir}
 
 Bundle 'https://gameteam360@bitbucket.org/gameteam360/pylon_ide.git', {'bundle_dir': team_bundle_dir}
